@@ -12,6 +12,7 @@ information on these APIs.
 | Name | Type | Description |
 | --- | --- | --- |
 | autocomplete | <code>AutocompleteAPI</code> | Instance of the API for the           [autocomplete](AutocompleteAPI.md) feature. |
+| network | <code>NetworkAPI</code> | Instance of the API for the           [networking](NetworkAPI.md) feature. |
 | platform | <code>PlatformAPI</code> | Instance of the API for the           [platform](PlatformAPI.md) feature. |
 | theme | <code>ThemeAPI</code> | Instance of the API for the           [theme](ThemeAPI.md) feature. |
 | tiles | <code>TilesAPI</code> | Instance of the API for the           [tiles](TilesAPI.md) feature. |

@@ -1,5 +1,6 @@
 const AutocompleteAPI = require('./lib/autocomplete_api');
 const BrowserAPI = require('./lib/browser_api');
+const NetworkAPI = require('./lib/network_api');
 const PlatformAPI = require('./lib/platform_api');
 const ThemeAPI = require('./lib/theme_api');
 const TilesAPI = require('./lib/tiles_api');
@@ -13,6 +14,7 @@ if (Object.getOwnPropertySymbols(global).indexOf(BROWSER_API_KEY) === -1) {
   const api = new BrowserAPI();
 
   api.autocomplete = new AutocompleteAPI(api);
+  api.network = new NetworkAPI(api);
   api.platform = new PlatformAPI(api);
   api.theme = new ThemeAPI(api);
   api.tiles = new TilesAPI(api);
@@ -43,6 +45,8 @@ Object.freeze(singleton.instance);
  *
  * @property {AutocompleteAPI} autocomplete -  Instance of the API for the
  *           [autocomplete]{@link AutocompleteAPI.md} feature.
+ * @property {NetworkAPI} network -  Instance of the API for the
+ *           [networking]{@link NetworkAPI.md} feature.
  * @property {PlatformAPI} platform -  Instance of the API for the
  *           [platform]{@link PlatformAPI.md} feature.
  * @property {ThemeAPI} theme -  Instance of the API for the
